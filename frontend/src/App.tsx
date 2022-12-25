@@ -4,7 +4,7 @@ import './App.css'
 import axios from 'axios';
 import { Grid } from "@mui/material";
 // @ts-ignore
-import { Header } from './components/Header/Header'
+import { Header } from './components'
 
 const ws = new WebSocket('ws://localhost:8080');
 
@@ -16,7 +16,7 @@ ws.addEventListener('message', function (evt) {
   console.log('received: %s', evt.data);
 });
 
-function App() {
+function App({ ...props }) {
 
 
 
@@ -29,10 +29,7 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <Grid container spacing={2}>
-        <Grid xs={12} item></Grid>
-      </Grid>
+
     </>
   )
 }

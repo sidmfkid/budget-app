@@ -6,18 +6,18 @@ import http from "http";
 import WebSocket, { WebSocketServer } from "ws";
 const app = express();
 
-const wss = new WebSocketServer({ port: 8080 });
+// const wss = new WebSocketServer({ port: 8080 });
 
-wss.on("connection", function connection(ws) {
-  ws.on("message", function message(data, isBinary) {
-    console.log(data);
-    wss.clients.forEach(function each(client) {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(data, { binary: isBinary });
-      }
-    });
-  });
-});
+// wss.on("connection", function connection(ws) {
+//   ws.on("message", function message(data, isBinary) {
+//     console.log(data);
+//     wss.clients.forEach(function each(client) {
+//       if (client.readyState === WebSocket.OPEN) {
+//         client.send(data, { binary: isBinary });
+//       }
+//     });
+//   });
+// });
 
 app.use(express.json());
 app.use(function (req, res, next) {

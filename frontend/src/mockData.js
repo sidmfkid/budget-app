@@ -594,4 +594,16 @@ export const projectData = {
         },
     ],
     notes: null,
+    created_by: 12345,
+    date_created: "11-01-2022"
+}
+
+export const user = {
+    id: 12345,
+    username: 'markcub',
+    phone: '123-456-7890',
+    email: 'any@email.com',
+    first_name: 'Mark',
+    last_name: 'Cuban',
+    is_active: false,
 }
